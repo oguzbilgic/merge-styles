@@ -5,9 +5,10 @@ Easily merge style objects.
 ### Usage
 
 ```js
+import React from 'react';
 import mergeStyles from 'merge-styles';
 
-styles = {
+const styles = {
   base: {
     backgroundColor: 'black'
   }
@@ -24,7 +25,7 @@ styles = {
   }
 };
 
-class Button extends React.Component {
+export default class Button extends React.Component {
   render() {
     return (
       <button style={mergeStyles(
