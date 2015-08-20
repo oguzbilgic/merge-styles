@@ -29,12 +29,14 @@ export default class Button extends React.Component {
   render() {
     return (
       <button style={mergeStyles(
-        styles.base,
-        this.state.hover && styles.hover,
-        this.props.size == 'small' && styles.sizes.small,
-        this.props.size == 'large' && styles.sizes.large
-      )}/>
-      {this.props.text}
+          styles.base,
+          this.state.hover && styles.hover,
+          this.props.size == 'small' && styles.sizes.small,
+          this.props.size == 'large' && styles.sizes.large
+        )}
+        onMouseEnter={() => this.setState({ hover: true })}
+        onMouseLeave={() => this.setState({ hover: false })}/>
+        {this.props.text}
       </button>
     );
   }
