@@ -28,7 +28,8 @@ const styles = {
 export default class Button extends React.Component {
   render() {
     return (
-      <button style={mergeStyles(
+      <button 
+        style={mergeStyles(
           styles.base,
           this.state.hover && styles.hover,
           this.props.size == 'small' && styles.sizes.small,
